@@ -1,4 +1,4 @@
-import { StatusBar, View, Text, KeyboardAvoidingView, TouchableOpacity } from 'react-native';
+import { StatusBar, View, Text, KeyboardAvoidingView } from 'react-native';
 import styled from 'styled-components';
 
 export const Container = styled(KeyboardAvoidingView)`

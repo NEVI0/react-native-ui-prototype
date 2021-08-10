@@ -1,7 +1,37 @@
+export type ThemeType = {
+	colors: {
+		primary: string;
+		secondary: string;
+		background: string;
+		backgroundSecondary: string;
+		text: string;
+		textLight: string;
+		btnText: string;
+	},
+	input: {
+		placeholder: string;
+		background: string;
+	},
+	fonts: {
+		default: {
+			normal: string;
+			bold?: string;
+			extraBold?: string;
+			italic?: string;
+		},
+		custom: {
+			normal: string;
+			bold?: string;
+			italic?: string;
+		}
+	}
+}
+
 export type AppContextType = {
 	isSigned: boolean;
 	isInDarkMode: boolean;
 	globalError: string;
+	theme: ThemeType;
 
 	signin(): Promise<void>;
 	signout(): Promise<void>;
@@ -11,14 +41,9 @@ export type AppContextType = {
 	clearGlobalError(): void;
 }
 
-export type GlobalError = {
-	type?: string;
-	err?: {
-		message?: string;
-		err?: any;
-	};
-	error?: {
-		message?: string;
-		error?: any;
-	}
+export type Expense = {
+	id: number;
+	name: string;
+	value: number;
+	image: string;
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import { TextInputProps } from 'react-native';
 
 import useAppContext from '../../contexts/AppContext';
-import createTheme from '../../styles/theme';
 import * as S from './styles';
 
 type InputType = {
@@ -11,8 +10,7 @@ type InputType = {
 
 const Input: React.FC<InputType & TextInputProps> = ({ icon, ...rest }) => {
 
-	const { isInDarkMode } = useAppContext();
-	const theme = createTheme(isInDarkMode);
+	const { theme } = useAppContext();
 
 	return (
 		<S.Container>

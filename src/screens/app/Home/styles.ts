@@ -1,4 +1,4 @@
-import { ScrollView, View, Text, StatusBar, TouchableOpacity } from 'react-native';
+import { ScrollView, View, Text, StatusBar } from 'react-native';
 import styled from 'styled-components';
 
 export const Container = styled(ScrollView)`
@@ -9,6 +9,9 @@ export const Container = styled(ScrollView)`
 export const ToolBar = styled(View)`
 	margin-top: ${StatusBar.currentHeight};
 	padding:  24px 24px 0 24px;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 `;
 
 export const Card = styled(View)`
@@ -43,4 +46,15 @@ export const NavigationRow = styled(View)`
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
+`;
+
+export const Footer = styled(View)`
+	align-items: center;
+	padding-bottom: 24px;
+`;
+
+export const FooterText = styled(Text)`
+	color: ${props => props.theme.colors.textLight};
+	font-family: ${props => props.theme.fonts.default.normal};
+	font-size: 12px;
 `;

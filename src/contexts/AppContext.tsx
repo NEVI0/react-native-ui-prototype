@@ -1,12 +1,15 @@
 import React, { useState, useEffect, useContext, createContext } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import { AppContextType } from '../utils/types';
+import createTheme from '../styles/theme';
+import { AppContextType, ThemeType } from '../utils/types';
 
 const AppContext: React.Context<AppContextType> = createContext({} as AppContextType);
 
 export const AppProvider: React.FC = ({ children }) => {
 	
+	const [ theme, setTheme ] = useState<ThemeType>(createTheme(false));
+
 	const [ isSigned, setIsSigned ] = useState<boolean>(false);
 	const [ isInDarkMode, setIsInDarkMode ] = useState<boolean>(false);
 
@@ -20,6 +23,7 @@ export const AppProvider: React.FC = ({ children }) => {
 				const isDarkMode = await AsyncStorage.getItem('@APP:darkmode');
 
 				setIsSigned(isSignedStorage ? true : false);
+				setTheme(createTheme(isDarkMode == 'true'));
 				setIsInDarkMode(isDarkMode == 'true');
 
 			} catch (err) {
@@ -53,9 +57,11 @@ export const AppProvider: React.FC = ({ children }) => {
 		if (isDarkMode === 'true') {
 			await AsyncStorage.setItem('@APP:darkmode', 'false');
 			setIsInDarkMode(false);
+			setTheme(createTheme(false));
 		} else {
 			await AsyncStorage.setItem('@APP:darkmode', 'true');
 			setIsInDarkMode(true);
+			setTheme(createTheme(true));
 		}
 
 	}
@@ -81,6 +87,7 @@ export const AppProvider: React.FC = ({ children }) => {
 	return (
 		<AppContext.Provider
 			value={{
+				theme,
 				isSigned,
 				isInDarkMode,
 				globalError,

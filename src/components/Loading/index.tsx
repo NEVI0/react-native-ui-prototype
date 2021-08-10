@@ -4,12 +4,10 @@ import { Modal, ActivityIndicator } from 'react-native';
 import useAppContext from '../../contexts/AppContext';
 
 import * as S from './styles';
-import createTheme from '../../styles/theme'; '../../styles/theme';
 
 const Loading: React.FC<{ visible: boolean; }> = ({ visible }) => {
 
-	const { isInDarkMode } = useAppContext();
-	const theme = createTheme(isInDarkMode);
+	const { theme } = useAppContext();
 
 	return (
 		<Modal 
