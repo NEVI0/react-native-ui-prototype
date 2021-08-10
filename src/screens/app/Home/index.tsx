@@ -92,7 +92,7 @@ const Home: React.FC<StackScreenProps<any>> = () => {
 
 							<View style={{ alignItems: 'flex-end' }}>
 								<S.CreditCardSubText>Expire Date</S.CreditCardSubText>
-								<S.CreditCardText>{ showCreditCardInfo ? '**' : '11/28' }</S.CreditCardText>
+								<S.CreditCardText>{ showCreditCardInfo ? '****' : '11/28' }</S.CreditCardText>
 							</View>
 						</S.CardInfo>
 					</S.Card>
