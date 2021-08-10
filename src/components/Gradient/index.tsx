@@ -1,10 +1,11 @@
 import React from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
-import { useTheme } from 'styled-components';
+
+import useAppContext from '../../contexts/AppContext';
 
 const Gradient: React.FC<{ radius?: number; }> = ({ radius, children }) => {
 
-	const theme: any = useTheme();
+	const { theme } = useAppContext();
 
 	return (
 		<LinearGradient

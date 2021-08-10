@@ -13,8 +13,7 @@ const App: React.FC = () => {
 		'nunito-regular': require('./assets/fonts/Nunito-Regular.ttf'),
 		'nunito-bold': require('./assets/fonts/Nunito-Bold.ttf'),
 		'nunito-extra-bold': require('./assets/fonts/Nunito-ExtraBold.ttf'),
-		'nunito-italic': require('./assets/fonts/Nunito-Italic.ttf'),
-		'lemon-regular': require('./assets/fonts/Lemon-Regular.ttf')
+		'nunito-italic': require('./assets/fonts/Nunito-Italic.ttf')
 	});
 
 	if (!loaded) {

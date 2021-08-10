@@ -21,11 +21,6 @@ const createTheme = (isInDarkMode: boolean): ThemeType => {
 				bold: 'nunito-bold',
 				extraBold: 'nunito-extra-bold',
 				italic: 'nunito-italic'
-			},
-			custom: {
-				normal: 'lemon-regular',
-				bold: undefined,
-				italic: undefined
 			}
 		}
 	}

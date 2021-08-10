@@ -2,7 +2,6 @@ import React from 'react';
 import { Modal, ActivityIndicator } from 'react-native';
 
 import useAppContext from '../../contexts/AppContext';
-
 import * as S from './styles';
 
 const Loading: React.FC<{ visible: boolean; }> = ({ visible }) => {

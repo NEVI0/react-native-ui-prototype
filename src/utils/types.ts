@@ -18,11 +18,6 @@ export type ThemeType = {
 			bold?: string;
 			extraBold?: string;
 			italic?: string;
-		},
-		custom: {
-			normal: string;
-			bold?: string;
-			italic?: string;
 		}
 	}
 }
