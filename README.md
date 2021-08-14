@@ -1,6 +1,6 @@
 ### :alien: React Native UI Prototype
 
-This is an exemple of a mobile app in **React Native** with some awesome screens :smile:. Created by me, **Névio Costa Magagnin** a full-stack develop just to practice.
+This is an exemple of a mobile app in **React Native** with some awesome screens :smile:. Created by me, **Névio Costa Magagnin** a full-stack developer just to practice.
 
 :v: :v:
 
