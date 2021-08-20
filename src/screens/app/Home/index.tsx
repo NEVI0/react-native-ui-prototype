@@ -15,7 +15,7 @@ import * as mockedData from '../../../utils/mocked';
 import * as info from '../../../../app.json';
 import * as S from './styles';
 
-const Home: React.FC<StackScreenProps<any>> = () => {
+const Home: React.FC<StackScreenProps<any>> = ({ navigation }) => {
 
 	const { signout, changeTheme } = useAppContext();
 
@@ -107,7 +107,7 @@ const Home: React.FC<StackScreenProps<any>> = () => {
 								key={ item.id.toString() }
 								text={ item.text }
 								icon={ item.icon }
-								onPress={ () => console.log('Navigation!') }
+								onPress={ () => item.id === 1 && navigation.navigate('Account') }
 							/>
 						))
 					}

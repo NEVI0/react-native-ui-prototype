@@ -4,6 +4,7 @@
   "repository": "https://github.com/NEVI0/react-native-ui-prototype",
   "version": "1.0.0",
   "private": false,
+  "license": "MSI",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
