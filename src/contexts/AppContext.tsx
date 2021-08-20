@@ -16,20 +16,22 @@ export const AppProvider: React.FC = ({ children }) => {
 	const [ globalError, setGlobalError ] = useState<string>('');
 
 	useEffect(() => {
-		(async () => {
+		const initContext = async () => {
 			try {
 				
 				const isSignedStorage = await AsyncStorage.getItem('@APP:signed');
 				const isDarkMode = await AsyncStorage.getItem('@APP:darkmode');
 
 				setIsSigned(isSignedStorage ? true : false);
-				setTheme(createTheme(isDarkMode == 'true'));
-				setIsInDarkMode(isDarkMode == 'true');
+				setTheme(createTheme(isDarkMode === 'true'));
+				setIsInDarkMode(isDarkMode === 'true');
 
 			} catch (err) {
 				console.log('Start AppContext.tsx error: ', err);
 			}
-		})();
+		}
+
+		initContext();
 	}, []);
 
 	const signin = async () => {
@@ -51,7 +53,6 @@ export const AppProvider: React.FC = ({ children }) => {
 	}
 
 	const changeTheme = async () => {
-
 		const isDarkMode = await AsyncStorage.getItem('@APP:darkmode');
 
 		if (isDarkMode === 'true') {
@@ -63,7 +64,6 @@ export const AppProvider: React.FC = ({ children }) => {
 			setIsInDarkMode(true);
 			setTheme(createTheme(true));
 		}
-
 	}
 
 	const createGlobalError = (err: any) => {
@@ -78,7 +78,7 @@ export const AppProvider: React.FC = ({ children }) => {
 				}
 			}
 		} catch (err) {
-			setGlobalError('Algum processo do aplicativo não foi finalizado ou não foi possível realiza-lo. Tente novamente ou chame o garçom para ajuda-lo!');
+			setGlobalError('Something went wrong in an app proccess! Try again later...');
 		}
 	}
 
