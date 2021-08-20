@@ -1,6 +1,19 @@
 export const REPOSITORY_URL = 'https://github.com/NEVI0/react-native-ui-prototype';
 
-export const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+export const MONTHS = [
+	'January', 
+	'February', 
+	'March', 
+	'April', 
+	'May', 
+	'June', 
+	'July', 
+	'August', 
+	'September', 
+	'October', 
+	'November', 
+	'December'
+];
 
 export const MOCKED_NAV_ITEMS = [
 	{ id: 1, text: 'Account', icon: 'user' },
