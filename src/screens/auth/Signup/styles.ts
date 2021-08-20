@@ -7,7 +7,7 @@ export const Container = styled(KeyboardAvoidingView)`
 	background-color: ${props => props.theme.colors.background};
 `;
 
-export const NavigationBar = styled(View)`
+export const ToolBar = styled(View)`
 	padding: 42px 24px;
 	margin-top: ${StatusBar.currentHeight};
 `;

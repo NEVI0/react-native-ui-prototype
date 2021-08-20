@@ -40,13 +40,13 @@ const Signup: React.FC<StackScreenProps<any>> = ({ navigation }) => {
 			enabled={ false }
 			keyboardVerticalOffset={ 20 }
 		>
-			<S.NavigationBar>
+			<S.ToolBar>
 				<IconWithText
 					text="Back"
 					icon="arrow-left"
 					onPress={ () => navigation.navigate('Signin') }
 				/>
-			</S.NavigationBar>
+			</S.ToolBar>
 
 			<S.Header>
 				<S.Title>Create Account</S.Title>
