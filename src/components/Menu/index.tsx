@@ -59,9 +59,7 @@ const Menu: React.FC<MenuType> = ({ visible, options, onClose }) => {
 									onPress={ () => handlePressItem(index) }
 								>
 									<S.MenuItemIcon name={ option.icon } />
-									<S.MenuItemText>
-										{ option.text }
-									</S.MenuItemText>
+									<S.MenuItemText>{ option.text }</S.MenuItemText>
 								</S.MenuItem>
 							))
 						}

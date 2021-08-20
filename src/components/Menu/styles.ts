@@ -33,7 +33,7 @@ export const CloseButton = styled(TouchableOpacity)<{ isInDarkMode: boolean }>`
 	align-items: center;
 	justify-content: center;
 	border-radius: 50px;
-	background-color: ${props => props.isInDarkMode ? '#202226' : '#ebebeb'};
+	background-color: ${props => props.theme.colors.backgroundSecondary};
 `;
 
 export const CloseButtonIcon = styled(Feather)`
