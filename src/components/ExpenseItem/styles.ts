@@ -1,4 +1,4 @@
-import { View, Text, Image as RNImage } from 'react-native';
+import { View, Text } from 'react-native';
 import styled from 'styled-components';
 
 export const Container = styled(View)`
@@ -15,9 +15,6 @@ export const ImageBox = styled(View)`
 	width: 70px;
 	height: 70px;
 	margin-right: 12px;
-`;
-
-export const Image = styled(RNImage)`
 `;
 
 export const Title = styled(Text)`

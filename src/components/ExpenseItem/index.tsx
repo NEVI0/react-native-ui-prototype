@@ -3,6 +3,7 @@ import { View, Image } from 'react-native';
 
 import { formatValueToCurrency, getCurrentDate } from '../../utils/functions';
 import { Expense } from '../../utils/types';
+
 import * as S from './styles';
 
 const ExpenseItem: React.FC<{ expense: Expense }> = ({ expense }) => {
