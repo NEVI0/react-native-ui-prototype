@@ -8,11 +8,11 @@ import AuthFlow from './AuthFlow';
 import Alert from '../components/Alert';
 
 import useAppContext from '../contexts/AppContext';
-import createTheme from '../styles/theme';
 
 const Routes: React.FC = () => {
 
 	const {
+		theme,
 		isSigned,
 		isInDarkMode,
 		globalError,
@@ -20,7 +20,7 @@ const Routes: React.FC = () => {
 	} = useAppContext();
 
 	return (
-		<ThemeProvider theme={ createTheme(isInDarkMode) }>
+		<ThemeProvider theme={ theme }>
 			<NavigationContainer>
 				{ isSigned ? <AppFlow /> : <AuthFlow /> }
 			</NavigationContainer>
