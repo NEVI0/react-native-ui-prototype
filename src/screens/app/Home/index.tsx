@@ -99,7 +99,7 @@ const Home: React.FC<StackScreenProps<any>> = ({ navigation }) => {
 				</Gradient>
 			</Section>
 
-			<Section title="Navigation">
+			<Section title="Navigation" subtitle="Main">
 				<S.NavigationRow style={{ marginBottom: 24 }}>
 					{
 						mockedData.MOCKED_NAV_ITEMS.map(item => (
