@@ -1,6 +1,4 @@
 import React from 'react';
-
-import useAppContext from '../../contexts/AppContext';
 import * as S from './styles';
 
 type NavigationButtonType = {
@@ -10,12 +8,9 @@ type NavigationButtonType = {
 }
 
 const NavigationButton: React.FC<NavigationButtonType> = ({ text, icon, onPress }) => {
-	
-	const { isInDarkMode } = useAppContext();
-
 	return (
 		<S.Container onPress={ onPress }>
-			<S.Box isInDarkMode={ isInDarkMode }>
+			<S.Box>
 				<S.Icon name={ icon } />
 			</S.Box>
 
@@ -24,7 +19,6 @@ const NavigationButton: React.FC<NavigationButtonType> = ({ text, icon, onPress 
 			</S.Text>
 		</S.Container>
 	);
-
 }
 
 export default NavigationButton;

@@ -6,13 +6,13 @@ export const Container = styled(TouchableOpacity)`
 	align-items: center;
 `;
 
-export const Box = styled(View)<{ isInDarkMode: boolean }>`
+export const Box = styled(View)`
 	padding: 18px;
 	border-radius: 50px;
 	align-items: center;
 	justify-content: center;
 	margin-bottom: 4px;
-	background-color: ${props => props.isInDarkMode ? '#202226' : '#ebebeb'};
+	background-color: ${props => props.theme.colors.backgroundSecondary};
 `;
 
 export const Icon = styled(Feather)`
